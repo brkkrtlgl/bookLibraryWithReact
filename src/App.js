@@ -1,14 +1,8 @@
 import React from "react";
-import Header from "./components/header";
-import ListBooks from "./components/ListBooks";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <ListBooks />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
