@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "./components/header";
+import ListBooks from "./components/ListBooks";
 
 function App() {
   return (
-    <div style={{ color: "#EDF2F7" }} className="App">
+    <div className="App">
       <Header />
+      <ListBooks />
     </div>
   );
 }
