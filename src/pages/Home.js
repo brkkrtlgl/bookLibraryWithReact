@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/header";
-import ListBooks from "./components/ListBooks";
+import Header from "../components/header";
+import ListBooks from "../components/ListBooks";
 
 const Home = (props) => {
   return (

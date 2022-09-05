@@ -5,38 +5,45 @@
       "name": "Das Kapital",
       "author": "Karl Marx",
       "isbn": "11111111111",
-      "categoryId": 1
+      "categoryId": "1"
     },
     {
       "id": 2,
       "name": "Kendine İyi Bak",
       "author": "Kemal Sayar",
       "isbn": "11111111112",
-      "categoryId": 2
+      "categoryId": "2"
     },
     {
       "id": 3,
       "name": "Günlük Yaşamın Psikopatolojisi",
       "author": "Sigmund Freud",
       "isbn": "11111111113",
-      "categoryId": 3
+      "categoryId": "3"
+    },
+    {
+      "id": 1662400047821,
+      "name": "Kişisel Direniş Kitabı",
+      "author": "Enver Atasever",
+      "isbn": "",
+      "categoryId": "1"
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Politics"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Personal Improvement"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Psychology"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Historical Fiction"
     }
   ]
