@@ -6,6 +6,7 @@ import Loading from "./Loading";
 const ListBooks = (props) => {
   const [books, setBooks] = useState(null);
   const [categories, setCategories] = useState(null);
+  const [didUpdate, setDidUpdate] = useState(false);
 
   useEffect(() => {
     axios
@@ -20,7 +21,16 @@ const ListBooks = (props) => {
           .catch((err) => console.log("categories err", err));
       })
       .catch((err) => console.log("books err", err));
-  }, []);
+  }, [didUpdate]);
+  const deleteBook = (id) => {
+    console.log(id);
+    axios
+      .delete(`http://localhost:3004/books/${id}`)
+      .then((res) => {
+        setDidUpdate(!didUpdate);
+      })
+      .catch((err) => console.log(err));
+  };
   if (books === null || categories === null) {
     return <Loading />;
   }
@@ -37,7 +47,12 @@ const ListBooks = (props) => {
             <th scope="col">Book Name</th>
             <th scope="col">Author</th>
             <th scope="col">Category</th>
-            <th scope="col">ISBN</th>
+            <th className="text-center" scope="col">
+              ISBN
+            </th>
+            <th className="text-center" scope="col">
+              Action
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -50,7 +65,20 @@ const ListBooks = (props) => {
                 <td>{book.name}</td>
                 <td>{book.author}</td>
                 <td>{category.name}</td>
-                <td>{book.isbn}</td>
+                <td className="text-center">
+                  {book.isbn === "" ? "-" : book.isbn}
+                </td>
+                <td>
+                  <div class="btn-group" role="group">
+                    <button
+                      type="button"
+                      className="btn btn-outline-danger btn-sm"
+                      onClick={() => deleteBook(book.id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </td>
               </tr>
             );
           })}

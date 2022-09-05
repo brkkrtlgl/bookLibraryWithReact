@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
@@ -7,9 +8,9 @@ const Header = (props) => {
       className="navbar navbar-expand-lg "
     >
       <div className="container-fluid">
-        <a style={{ color: "#EDF2F7" }} className="navbar-brand" href="#">
+        <Link style={{ color: "#EDF2F7" }} className="navbar-brand" to="/">
           My Library
-        </a>
+        </Link>
         <button
           style={{ color: "#EDF2F7" }}
           className="navbar-toggler"
@@ -25,18 +26,9 @@ const Header = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
-                style={{ color: "#EDF2F7" }}
-                className="nav-link active"
-                href="#"
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a style={{ color: "#EDF2F7" }} className="nav-link" href="#">
-                Link
-              </a>
+              <Link style={{ color: "#EDF2F7" }} className="nav-link " to="/">
+                Books
+              </Link>
             </li>
           </ul>
         </div>

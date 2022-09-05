@@ -20,13 +20,6 @@
       "author": "Sigmund Freud",
       "isbn": "11111111113",
       "categoryId": "3"
-    },
-    {
-      "id": 1662400047821,
-      "name": "Kişisel Direniş Kitabı",
-      "author": "Enver Atasever",
-      "isbn": "",
-      "categoryId": "1"
     }
   ],
   "categories": [
